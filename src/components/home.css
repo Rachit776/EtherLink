@@ -1,0 +1,240 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+/* Variables */
+:root {
+  --primary-color: #f5ebe0;
+  --text-dark: #222;
+  --text-medium: #555;
+  --text-light: #777;
+  --white: #fff;
+  --accent-color: crimson;
+  --box-shadow: 0 13px 27px -5px hsla(240, 30%, 28%, 0.25),
+                0 8px 16px -8px hsla(0, 0%, 0%, 0.3),
+                0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
+  --transition: all 0.3s ease;
+}
+
+/* Reset */
+h1, h2, h3, h5 {
+  margin: 0;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  color: var(--white);
+  padding: 10px;
+}
+
+.header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3em;
+  margin-bottom: 0.2em;
+  line-height: 1.2;
+  color: var(--text-dark);
+}
+
+.header h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: var(--text-medium);
+  max-width: 30em;
+  margin: 0 auto;
+}
+
+/* Cards Section */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 5%;
+}
+
+.card {
+  background: var(--primary-color);
+  width: 24em;
+  border-radius: 0.6em;
+  overflow: visible;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 13px 40px -5px hsla(240, 30.1%, 28%, 0.12),
+              0 8px 32px -8px hsla(0, 0%, 0%, 0.14),
+              0 -6px 32px -6px hsla(0, 0%, 0%, 0.02);
+}
+
+.card img {
+  width: 100%;
+  object-fit: cover;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.card h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-top: 0.5em;
+  line-height: 1.4;
+  transition: var(--transition);
+}
+
+.card p {
+  color: var(--text-light);
+  font-size: 0.95em;
+}
+
+.card h5 {
+  color: #292727;
+  font-weight: 700;
+  font-size: 0.75em;
+  letter-spacing: 0.04em;
+  margin-top: 1.4em;
+  text-transform: uppercase;
+}
+
+.card-body {
+  padding: 1.2em;
+}
+
+/* Special Card Image */
+.card_sp_image,
+.card_sp_round_image,
+.card_sp_round_image_food {
+  display: block;
+  margin: -100px auto 0;
+  box-shadow: var(--box-shadow);
+  border-radius: 50% !important;
+  width: 150px !important;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card_sp_round_image_food {
+  height: 250px;
+  margin-top: -90px;
+}
+
+.card_sp {
+  margin: 150px 0 40px;
+}
+
+/* About Section */
+.home_about {
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  margin: 5% 0;
+}
+
+.home_about_header {
+  font-family: 'Carattere', cursive;
+  font-weight: bold;
+  font-size: 70px;
+  color: var(--text-dark);
+}
+
+.home_about_description_main {
+  margin-top: 3%;
+  padding-left: 30px;
+  opacity: 0.85;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.home_about_container {
+  background-image: url('https://www.colorhexa.com/d8bfd8.png');
+  background-size: cover;
+  background-position: center;
+  background-color: var(--primary-color);
+}
+
+.bg_gradient {
+  background: linear-gradient(180deg, var(--primary-color) 46.67%, var(--primary-color) 46.68%);
+}
+
+.card-cnt {
+  color: var(--accent-color);
+}
+
+/* Carousel */
+.carousel .carousel-item {
+  height: 400px;
+}
+
+.carousel-item img {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  min-height: 400px;
+  width: 100%;
+}
+
+/* Links */
+.card_link {
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-dark);
+  margin-bottom: 2%;
+  transition: color 0.2s ease;
+}
+
+.card_link:hover {
+  color: aqua;
+}
+
+/* Responsive Styles */
+@media (max-width: 1023px) {
+  .hp_carousel_pic {
+    width: 945px;
+    height: 455px;
+  }
+
+  .header {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header h1, .header h3, h1, h2, h3, h5 {
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .cards {
+    display: block;
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+
+  .hp_carousel_pic {
+    width: 100%;
+    height: auto;
+  }
+
+  .header {
+    margin-bottom: 10px;
+  }
+
+  .comments {
+    width: 90%;
+  }
+}
