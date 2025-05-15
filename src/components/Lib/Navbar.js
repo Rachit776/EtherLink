@@ -48,7 +48,7 @@ class Navbar extends Component {
                   <strong>Library</strong>
                 </a>
               </li>
-              <i className="fas fa-book" style={{ marginTop: "0.5%" }}></i>
+              <i className="fas fa-book" style={{ marginTop: "2.1%" }}></i>
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
@@ -76,7 +76,7 @@ class Navbar extends Component {
                   <strong>Cafeteria</strong>
                 </a>
               </li>
-              <i className="fas fa-hamburger" style={{ marginTop: "0.5%" }}></i>
+              <i className="fas fa-hamburger" style={{ marginTop: "2.1%" }}></i>
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
@@ -104,16 +104,8 @@ class Navbar extends Component {
                   <strong>Info</strong>
                 </a>
               </li>
-              <i className="fas fa-home" style={{ marginTop: "0.5%" }}></i>
-              <li className="nav-item dropdown" style={{ marginRight: "0.5%" }}>
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                ></a>
+              <i className="fas fa-home" style={{ marginTop: "2.1%" }}></i>
+              <li className="nav-item dropdown" style={{ marginRight: "1.5%" }}>
               </li>
               {/* ============= */}
               <li className="nav-item">
@@ -121,7 +113,7 @@ class Navbar extends Component {
                   <strong>Admin</strong>
                 </a>
               </li>
-              <i className="fas fa-user-cog" style={{ marginTop: "0.5%" }}></i>
+              <i className="fas fa-user-cog" style={{ marginTop: "2.1%" }}></i>
               {/* ============ */}
             </ul>
           </div>

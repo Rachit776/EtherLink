@@ -1,5 +1,6 @@
 import React from "react";
 import "./navbar.css";
+import icon from "../assets/icon.svg"
 
 export default function Navbar() {
   return (
@@ -7,10 +8,10 @@ export default function Navbar() {
       <div className="container-fluid">
         <a href="/" style={{ marginLeft: "4rem" }}>
           <img
-            src="\icon.png"
+            src={icon}
             alt="Hindi fonts"
             width="140"
-            height="50"
+            height="75"
             className="align-top"
           />
         </a>
@@ -35,7 +36,7 @@ export default function Navbar() {
                 <strong>Library</strong>
               </a>
             </li>
-            <i className="fas fa-book" style={{ marginTop: "0.5%" }}></i>
+            <i className="fas fa-book" style={{ marginTop: "2.1%" }}></i>
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
@@ -61,7 +62,7 @@ export default function Navbar() {
                 <strong>Cafeteria</strong>
               </a>
             </li>
-            <i className="fas fa-hamburger" style={{ marginTop: "0.5%" }}></i>
+            <i className="fas fa-hamburger" style={{ marginTop: "2.1%" }}></i>
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
@@ -89,16 +90,9 @@ export default function Navbar() {
                 <strong>Info</strong>
               </a>
             </li>
-            <i className="fas fa-home" style={{ marginTop: "0.5%" }}></i>            
-            <li className="nav-item dropdown" style={{ marginRight: "1%" }}>
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              ></a>
+            <i className="fas fa-home" style={{ marginTop: "2.1%" }}></i>            
+            <li className="nav" style={{ marginRight: "1.5%" }}>
+              
             </li>
             {/* ========================================  */}
             <li className="nav-item">
@@ -106,7 +100,7 @@ export default function Navbar() {
                 <strong>Admin</strong>
               </a>
             </li>
-            <i className="fas fa-user-cog" style={{ marginTop: "0.5%" }}></i>
+            <i className="fas fa-user-cog" style={{ marginTop: "2.1%" }}></i>
           </ul>
         </div>
       </div>

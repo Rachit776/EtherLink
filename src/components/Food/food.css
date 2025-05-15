@@ -299,12 +299,12 @@ h5 {
 
 .home_about_container 
 {
-  background-color: #F2F1F1
+  background-color: #ffffff
 }
 
 .bg_gradient
 {
-  background: linear-gradient(180deg, #F2F1F1 46.67%, rgba(196, 196, 196, 0) 46.68%);
+  background: linear-gradient(180deg, #ffffff 46.67%, rgba(196, 196, 196, 0) 46.68%);
 }
 .card
 {

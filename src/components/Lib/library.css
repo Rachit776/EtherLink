@@ -272,15 +272,15 @@ h5 {
 
 .home_about_container 
 {
-  background-image: url('https://www.colorhexa.com/d8bfd8.png'); 
+  background-color: #ffffff; 
   background-size: cover;
   background-position: center center;
-  background-color: #d8bfd8;
+  background-color: #ffffff;
 }
 
 .bg_gradient
 {
-  background: linear-gradient(180deg, #d8bfd8 46.67%, rgba(196, 196, 196, 0) 46.68%);
+  background: linear-gradient(180deg, #ffffff 46.67%, rgba(196, 196, 196, 0) 46.68%);
 }
 .card
 {
@@ -355,7 +355,7 @@ h5 {
   }
 
   .card {
-    background: #da70d6 ;
+    background: #ffffff ;
     width: 24em;
     border-radius: 0.6em;
    

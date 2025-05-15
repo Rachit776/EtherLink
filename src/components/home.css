@@ -5,11 +5,11 @@
 
 /* Variables */
 :root {
-  --primary-color: #f5ebe0;
+  --primary-color: #ffffff;
   --text-dark: #222;
   --text-medium: #555;
   --text-light: #777;
-  --white: #fff;
+  --white: #ffffff;
   --accent-color: crimson;
   --box-shadow: 0 13px 27px -5px hsla(240, 30%, 28%, 0.25),
                 0 8px 16px -8px hsla(0, 0%, 0%, 0.3),
@@ -48,15 +48,15 @@ h1, h2, h3, h5 {
 /* Cards Section */
 .cards {
   display: flex;
-  flex-wrap: wrap;
+  height: auto;
+  flex-wrap: flex;
   justify-content: center;
   gap: 2em;
-  margin-top: 5%;
 }
 
 .card {
   background: var(--primary-color);
-  width: 24em;
+  width: auto;
   border-radius: 0.6em;
   overflow: visible;
   cursor: pointer;
@@ -136,11 +136,59 @@ h1, h2, h3, h5 {
   margin: 5% 0;
 }
 
+.library-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 3rem;
+  flex-wrap: wrap; /* ensures stacking on smaller screens */
+}
+
+
+.library-text {
+  max-width: 600px;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.library-text h2 {
+  font-family: 'Carattere', cursive;
+  font-size: 3.5rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.library-text p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-img-container {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-top-left-radius: 0.6em;
+  border-top-right-radius: 0.6em;
+  overflow: hidden;
+}
+
+.card-img-container img {
+  max-width: 80%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 .home_about_header {
   font-family: 'Carattere', cursive;
   font-weight: bold;
   font-size: 70px;
   color: var(--text-dark);
+  margin-left: 30px;
 }
 
 .home_about_description_main {
@@ -150,13 +198,11 @@ h1, h2, h3, h5 {
   font-size: 1rem;
   line-height: 1.6;
   text-align: justify;
+  justify-content: center;
 }
 
 .home_about_container {
-  background-image: url('https://www.colorhexa.com/d8bfd8.png');
-  background-size: cover;
-  background-position: center;
-  background-color: var(--primary-color);
+  background-color:#ffffff; 
 }
 
 .bg_gradient {
