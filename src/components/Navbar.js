@@ -9,7 +9,6 @@ export default function Navbar() {
         <a href="/" style={{ marginLeft: "4rem" }}>
           <img
             src={icon}
-            alt="Hindi fonts"
             width="140"
             height="75"
             className="align-top"
@@ -86,8 +85,8 @@ export default function Navbar() {
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="/">
-                <strong>Info</strong>
+              <a className="nav-link" aria-current="page" href="/about">
+                <strong>About</strong>
               </a>
             </li>
             <i className="fas fa-home" style={{ marginTop: "2.1%" }}></i>            

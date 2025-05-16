@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./navbar.css"
+import icon from "../../assets/icon.svg"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
@@ -11,10 +12,9 @@ class Navbar extends Component {
         <div className="container-fluid">
           <a href="/" style={{ marginTop: "-10px" }}>
           <img
-            src="icon.png"
-            alt="Hindi fonts"
+            src={icon}
             width="140"
-            height="50"
+            height="75"
             className="align-top"
           />
           </a>
@@ -47,7 +47,7 @@ class Navbar extends Component {
                   <strong>Library</strong>
                 </a>
               </li>
-              <i className="fas fa-book" style={{ marginTop: "0.5%" }}></i>
+              <i className="fas fa-book" style={{ marginTop: "2.2%" }}></i>
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
@@ -74,7 +74,7 @@ class Navbar extends Component {
                   <strong>Cafeteria</strong>
                 </a>
               </li>
-              <i className="fas fa-hamburger" style={{ marginTop: "0.5%" }}></i>
+              <i className="fas fa-hamburger" style={{ marginTop: "2.2%" }}></i>
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
@@ -98,20 +98,13 @@ class Navbar extends Component {
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="/">
-                  <strong>Info</strong>
+                <a className="nav-link" aria-current="page" href="/about">
+                  <strong>About</strong>
                 </a>
               </li>
-              <i className="fas fa-home" style={{ marginTop: "0.5%" }}></i>
-              <li className="nav-item dropdown" style={{ marginRight: "0.5%" }}>
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                ></a>
+              <i className="fas fa-home" style={{ marginTop: "2.2%" }}></i>
+              <li className="nav-item dropdown" style={{ marginRight: "2%" }}>
+               
               </li>
               {/* ============= */}
               <li className="nav-item">
@@ -119,7 +112,7 @@ class Navbar extends Component {
                   <strong>Admin</strong>
                 </a>
               </li>
-              <i className="fas fa-user-cog" style={{ marginTop: "0.5%" }}></i>
+              <i className="fas fa-user-cog" style={{ marginTop: "2.2%"}}></i>
             </ul>
           </div>
         </div>

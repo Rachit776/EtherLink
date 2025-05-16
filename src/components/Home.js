@@ -98,7 +98,7 @@ export default function Home() {
       {/* =================== Cards Section =================== */}
       <div className="home_about_container">
         <div className="container-fluid cards bg_gradient mt-0 d-flex justify-content-around flex-wrap">
-          <div
+          <a
             href="/library"
             className="card text-dark text-decoration-none m-2"
             style={{ width: "19.8%" }}
@@ -120,8 +120,8 @@ export default function Home() {
                 checking, class notes, etc.
               </p>
             </div>
-          </div>
-          <div
+          </a>
+          <a
             href="/food"
             className="card text-dark text-decoration-none m-2"
             style={{ width: "20%" }}
@@ -143,16 +143,16 @@ export default function Home() {
                 delivered to you.
               </p>
             </div>
-          </div>
-          <div
-            href="/"
+          </a>
+          <a
+            href="/about"
             className="card text-dark text-decoration-none m-2"
             style={{ width: "20%" }}
           >
             <img
               src={imageinfo}
               className="card-img-top"
-              alt="Hostel"
+              alt="about"
               style={{
                 maxHeight: "100%",
                 maxWidth: "100%",
@@ -165,7 +165,7 @@ export default function Home() {
                 Small information related to project. My information and skills.
               </p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
       <br />
@@ -175,7 +175,7 @@ export default function Home() {
       <div className="row p-5 home_about_container">
         <div className="col-lg-6 d-flex align-items-center">
           <div>
-            <a href="/">
+            <a href="/about">
               <h3 className="home_about_header">About</h3>
             </a>
             <p className="home_about_description_main">
@@ -192,6 +192,7 @@ export default function Home() {
         </div>
         <div className="col-lg-6 d-flex justify-content-center align-items-center">
           <div className="logo">
+            <a href="/about">
             <img
               src={icon}
               alt="App logo"
@@ -199,6 +200,7 @@ export default function Home() {
               height="160"
               className="img-fluid"
             />
+            </a>
           </div>
         </div>
       </div>

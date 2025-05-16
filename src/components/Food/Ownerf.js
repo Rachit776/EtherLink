@@ -108,19 +108,6 @@ class Ownerf extends Component {
                 />
               </div>
               <div className="form-group form_components">
-                <h6>Item Image URL (*optional)</h6>
-                <Form.Control
-                  type="text"
-                  style={{ width: "100%" }}
-                  id="imageURL"
-                  disabled={this.props.canteenOwner !== this.props.account}
-                  placeholder="Enter: Item Image URL"
-                  ref={(input) => {
-                    this.item_url = input;
-                  }}
-                />
-              </div>
-              <div className="form-group form_components">
                 <h6 className="form-group form_components">
                   <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check

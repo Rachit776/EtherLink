@@ -10,94 +10,108 @@ class Student extends Component {
       <>
         <h2
           style={{
-            marginBottom: "5%",
+            marginBottom: "1rem",  // reduced from 5%
             textAlign: "center",
             fontFamily: "'Be Vietnam Pro', sans-serif",
           }}
         >
           Welcome to Library
         </h2>
-        <div className="container-fluid mt-5 text-center">
-          {/* ========================================= Show all Books (Mapping) ========================================= */}
+        <div className="container-fluid text-center">
+          {/* Removed mt-5 here to reduce space */}
 
-          <Row className="card-group">
-            {this.props.books.map((file, index) => {
-              return (
-                <Col lg={3} md={4} sm={6} className="pt-4 mb-3" key={file.book_Hash}>
-                  <Card
-                    className="card_sp w-100"
+          <Row className="card-group gx-3 gy-4">
+            {this.props.books.map((file) => (
+              <Col
+                lg={2}
+                md={3}
+                sm={4}
+                xs={6}
+                className="pt-2 mb-3"
+                key={file.book_Hash}
+              >
+                <Card
+                  className="card_sp w-100 h-100"
+                  style={{
+                    borderRadius: "20px",
+                    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+                    padding: "0.5rem",
+                  }}
+                >
+                  <Card.Img
+                    variant="top"
+                    src="https://images.ctfassets.net/o78em1y1w4i4/LHN0F94cNFCx1drEcfcsY/984e632abf38018f2a6ab22c4b61fdc6/teaser-book-with-heart-pages.jpg?fm=webp&w=1160&q=75"
+                    alt={`Cover of ${file.book_Name}`}
                     style={{
-                      textAlign: "center",
-                      marginBottom: "2%",
-                      borderRadius: "16px",
-                      boxShadow: "0 4px 8px 0 #f2f1f1, 0 6px 5px 0 rgba(0, 0, 0, 0.19)"
+                      height: "10rem",
+                      objectFit: "cover",
+                      borderTopLeftRadius: "20px",
+                      borderTopRightRadius: "20px",
                     }}
-                  >
-                    {/* ======================== Book Image (From Google Books)  */}
-                    <Card.Img
-                      variant="top"
-                      src={
-                        "https://images.ctfassets.net/o78em1y1w4i4/LHN0F94cNFCx1drEcfcsY/984e632abf38018f2a6ab22c4b61fdc6/teaser-book-with-heart-pages.jpg?fm=webp&w=1160&q=75"
-                      }
-                      alt={`Cover of ${file.book_Name}`}
-                      style={{ height: "13.6rem" }}
-                    />
+                  />
 
-                    {/* ======================== Book Name  */}
-                    <Card.Body>
-                      <Card.Title
-                        style={{
-                          fontSize: "17px",
-                          color: "black",
-                          fontFamily: "'Be Vietnam Pro', sans-serif",
-                        }}
-                      >
-                        <b>{file.book_Name.substring(0, 46)}</b>
-                      </Card.Title>
+                  <Card.Body style={{ padding: "0.5rem" }}>
+                    <Card.Title
+                      style={{
+                        fontSize: "14px",
+                        color: "#222",
+                        fontFamily: "'Be Vietnam Pro', sans-serif",
+                        whiteSpace: "nowrap",
+                        textOverflow: "ellipsis",
+                      }}
+                      title={file.book_Name}
+                    >
+                      <b>{file.book_Name}</b>
+                    </Card.Title>
 
-                      {/* ======================== Author  */}
-                      <Card.Subtitle
-                        className="mb-1 text-muted"
-                        style={{ fontSize: "14px", height: "30px" }}
-                      >
-                        {file.author}
-                      </Card.Subtitle>
+                    <Card.Subtitle
+                      className="mb-1 text-muted"
+                      style={{
+                        fontSize: "12px",
+                        whiteSpace: "nowrap",
+                        textOverflow: "ellipsis",
+                      }}
+                    >
+                      {file.author}
+                    </Card.Subtitle>
 
-                      {/* ======================== Description  */}
-                      <Card.Text style={{ fontSize: "12px", height: "30px" }}>
-                        {file.book_Description.substring(0, 80)}...
-                      </Card.Text>
+                    <Card.Text
+                      style={{
+                        fontSize: "11px",
+                        height: "35px",
+                        textOverflow: "ellipsis",
+                      }}
+                    >
+                      {file.book_Description?.substring(0, 70)}...
+                    </Card.Text>
 
-                      {/* ======================== Uploader Address  */}
-                      <Card.Link
-                        style={{ fontSize: "11px", color: "darkcyan" }}
-                        href={"https://etherscan.io/address/" + file.uploader}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        By: {file.uploader.substring(0, 10)}...
-                      </Card.Link>
-                      <br />
+                    <Card.Link
+                      style={{ fontSize: "10px", color: "darkcyan" }}
+                      href={`https://etherscan.io/address/${file.uploader}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      By: {file.uploader?.substring(0, 10)}...
+                    </Card.Link>
+                    <br />
 
-                      {/* ======================== Download Link (IPFS Infura)  */}
-                      <Card.Link
-                        className="btn btn-success"
-                        style={{
-                          fontSize: "0.8rem",
-                          borderRadius: "10px",
-                          margin: "2%",
-                        }}
-                        href={"http://127.0.0.1:8080/ipfs/" + file.book_Hash}
-                        target="_blank"
-                        download="download"
-                      >
-                        Download &nbsp; <FontAwesomeIcon icon={faDownload} />
-                      </Card.Link>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              );
-            })}
+                    <Card.Link
+                      className="btn btn-sm btn-success mt-2"
+                      style={{
+                        fontSize: "0.7rem",
+                        borderRadius: "12px",
+                        padding: "4px 10px",
+                      }}
+                      href={`https://ipfs.io/ipfs/${file.book_Hash}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Download <FontAwesomeIcon icon={faDownload} />
+                    </Card.Link>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
           </Row>
         </div>
       </>

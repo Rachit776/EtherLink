@@ -9,6 +9,7 @@ import Food from "./components/Food/Food";
 import Lib from "./components/Lib/Lib";
 import Applib from "./components/Lib/Applib";
 import AppFood from "./components/Food/AppFood";
+import About from "./components/about/About"
 
 const App = () => {
   return (
@@ -30,7 +31,9 @@ const App = () => {
           <Route path="/lib-ebook" component={Applib} />
           <Route path="/lib-notes" component={Applib} />
           <Route path="/lib-librarian" component={Applib} />
-
+          
+          <Route path="/about" component={About} />
+                  
           <Route path="/admin">
             <Applib />
             <AppFood />

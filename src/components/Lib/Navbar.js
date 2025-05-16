@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./navbar.css"
+import icon from "../../assets/icon.svg"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle, faCaretDown } from "@fortawesome/free-solid-svg-icons";
@@ -12,10 +13,9 @@ class Navbar extends Component {
         <div className="container-fluid">
           <a href="/" style={{ marginTop: "-10px" }}>
           <img
-            src="icon.png"
-            alt="Hindi fonts"
+            src={icon}
             width="140"
-            height="50"
+            height="75"
             className="align-top"
           />
           </a>
@@ -100,8 +100,8 @@ class Navbar extends Component {
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="/">
-                  <strong>Info</strong>
+                <a className="nav-link" aria-current="page" href="/about">
+                  <strong>About</strong>
                 </a>
               </li>
               <i className="fas fa-home" style={{ marginTop: "2.1%" }}></i>
