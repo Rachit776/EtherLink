@@ -1,10 +1,9 @@
 # EtherLink
 
-EtherLink is a decentralized application (dApp) built on Ethereum that provides multiple blockchain-based services including rental agreements, food ordering, and library management.
+A decentralized platform built on Ethereum that streamlines rental agreements, food ordering, and library management through smart contracts and IPFS storage.
 
 ## 🚀 Features
 
-- **Smart Contract-based Rental Agreements**: Secure and transparent rental agreement management
 - **Decentralized Food Ordering System**: Order food using blockchain technology
 - **Digital Library Management**: Manage library resources on the blockchain
 - **Modern React-based UI**: Responsive and user-friendly interface with parallax effects
@@ -31,9 +30,8 @@ EtherLink is a decentralized application (dApp) built on Ethereum that provides 
 
 The project includes three main smart contracts:
 
-1. **RentalAgreement.sol**: Handles rental agreements and transactions
-2. **FoodOrder.sol**: Manages food ordering system
-3. **Library.sol**: Controls library resource management
+1. **FoodOrder.sol**: Manages food ordering system
+2. **Library.sol**: Controls library resource management
 
 ## 🔧 Prerequisites
 
